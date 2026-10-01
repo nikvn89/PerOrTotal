@@ -33,6 +33,19 @@ The JavaScript tests cover POOL/FRESH payable behavior, wallet roles, exhausted 
 - Explorer result observed: `FINALIZED / SUCCESS`
 - Author test wallet: `0x6276095FAEA15108740445ff277fdA8c304657F4`
 - Claimant test wallet: `0x037f58E33c1Ec8fdA272361E0aAC1e31054a1CDE`
+- Tested Cap ID: `9778c08b1662991ef14a6da7d4ab8c85c5ff3935f82814298a19da6d5746c952`
+
+### Accepted-state wallet result — 1 October 2026
+
+| Step | Asked | Recorded | Resulting remaining | UI result |
+|---|---:|---:|---:|---|
+| Open aggregate cap | — | — | `10000` | `AGGREGATE · POOL` |
+| Claim 1 (`first`) | `6000` | `6000` | `4000` | `FULL` |
+| Claim 2 (`second-over-cap`) | `6000` | `4000` | `0` | `CUT` |
+| Further claim | `6000` preview | `0` | `0` | Blocked before wallet: `The cap has been used up` |
+| Author dispute on claim 2 | — | remains `4000` | remains `0` | `Disputed: Not accepted` |
+
+This confirms that accepted on-chain state remembers earlier claims, cuts the second claim at the shared ceiling, blocks any further write after exhaustion, and keeps the frozen payable amount unchanged when the author adds dispute metadata.
 
 ## Important wallet test only
 
@@ -50,7 +63,7 @@ Do not press **Open cap** again if a transaction hash already appeared. Use **Re
 
 1. Switch MetaMask to claimant wallet `0x037f58E33c1Ec8fdA272361E0aAC1e31054a1CDE`.
 2. Record `6000` with note `first`; after accepted state, confirm recorded is `6000` and remaining is `4000`.
-3. Record `6000` with note `second`; after accepted state, confirm recorded is `4000`, remaining is `0`, and the pool is exhausted.
+3. Record `6000` with note `second-over-cap`; after accepted state, confirm recorded is `4000`, remaining is `0`, and the pool is exhausted.
 
 ### Part 3 — prove author-only dispute metadata
 
