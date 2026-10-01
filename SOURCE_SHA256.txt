@@ -1,0 +1,1 @@
+d5cd66fb6d945e56e24540e0b72ca41887ad873bcc3d7b2ed760e6ee258db4ae  contracts/CapScope.py

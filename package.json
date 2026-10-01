@@ -1,0 +1,28 @@
+{
+  "name": "per-or-total",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "node --test tests-js/*.test.mjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "calldata": "node tools/calldata-bytes.mjs",
+    "probe:calldata": "node tools/probe-calldata.mjs",
+    "verify:source": "node tools/verify-source.mjs"
+  },
+  "dependencies": {
+    "genlayer-js": "1.1.8",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "viem": "2.55.15"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.4"
+  }
+}
