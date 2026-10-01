@@ -212,11 +212,20 @@ export async function passiveWallet() {
 
 export const capScope = {
   openCap: (account: string, claimant: string, label: string, amount: string, text: string) =>
-    submit(account, 'open_cap', [getAddress(claimant.trim()), pyNormalizeWhitespace(label), amount, pyStrip(text)]),
+    submit(account, 'open_cap', [
+      getAddress(claimant.trim()),
+      pyNormalizeWhitespace(label),
+      BigInt(amount),
+      pyStrip(text),
+    ] as any),
   recordClaim: (account: string, capId: string, amount: string, note: string) =>
-    submit(account, 'record_claim', [capId.trim().toLowerCase(), amount, pyStrip(note)]),
+    submit(account, 'record_claim', [
+      capId.trim().toLowerCase(),
+      BigInt(amount),
+      pyStrip(note),
+    ] as any),
   disputeClaim: (account: string, capId: string, index: number, note: string) =>
-    submit(account, 'dispute_claim', [capId.trim().toLowerCase(), String(index), pyStrip(note)]),
+    submit(account, 'dispute_claim', [capId.trim().toLowerCase(), index, pyStrip(note)] as any),
   getCap: async (id: string) => {
     const value = unpack<any>(await read('get_cap', [id.trim().toLowerCase()]))
     if (!value || (typeof value === 'object' && Object.keys(value).length === 0)) {
@@ -227,19 +236,19 @@ export const capScope = {
     return validateCap(value)
   },
   getClaims: async (id: string) => {
-    const value = unpack<any>(await read('get_claims', [id.trim().toLowerCase(), '0', '50']))
+    const value = unpack<any>(await read('get_claims', [id.trim().toLowerCase(), 0, 50] as any))
     if (!Array.isArray(value)) return []
     return value.map(validateClaim)
   },
   getClaim: async (id: string, index: number) => validateClaim(
-    unpack<any>(await read('get_claim', [id.trim().toLowerCase(), String(index)])),
+    unpack<any>(await read('get_claim', [id.trim().toLowerCase(), index] as any)),
   ),
 }
 
 export function openCapCalldataBytes(claimant: string, label: string, amount: string, text: string) {
   const call = abi.calldata.encode({
     method: 'open_cap',
-    args: [claimant.trim(), pyNormalizeWhitespace(label), amount, pyStrip(text)],
+    args: [claimant.trim(), pyNormalizeWhitespace(label), BigInt(amount), pyStrip(text)],
   })
   return (abi.transactions.serialize([call, false]).length - 2) / 2
 }
