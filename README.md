@@ -12,6 +12,7 @@ A two-party ceiling ledger on GenLayer StudioNet (chain 61999) · py-genlayer v0
 |---|---|
 | Contract source | `contracts/CapAccord.py` (SHA-256 in `SOURCE_SHA256.txt`) |
 | Project deployment | [`0x59846a597599BEdcDC43264b20D6BED8658709B0`](https://explorer-studio.genlayer.com/address/0x59846a597599BEdcDC43264b20D6BED8658709B0) |
+| Live app | https://per-or-total-u6np.vercel.app |
 | Evidence | `RUNTIME_EVIDENCE.md` (one tx hash per row) · `TESTING.md` |
 | Semantic core | the CapScope Intelligent Contract's rubric, fence, classifier and fail-safe, verbatim |
 
@@ -37,6 +38,11 @@ Unresolved readings count as PER_EVENT, so a pool is never drawn down on a guess
 
 The claimant cannot confirm their own claim, the author cannot accept for the claimant, and each claim is decided once.
 What remains unverifiable is stated in "Honest limitation" below.
+
+On StudioNet through this app: the claimant accepted the text by its hash, recorded two claims of 6,000, and the author
+confirmed one (payable 6,000, 4,000 left in the pool) and rejected the other with a note (nothing drawn).
+
+![Claim 1 confirmed, claim 2 rejected](docs/evidence/2-confirmed-and-rejected.png)
 
 ## What the app shows
 

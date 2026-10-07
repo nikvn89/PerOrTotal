@@ -59,7 +59,11 @@ characters fit in 255 bytes; the proposal form shows a byte meter and disables *
 
 See `RUNTIME_EVIDENCE.md`.
 
-The Project run through this app is recorded there once it has been made.
+Project run through the app (6 transactions): the author proposed "Every payment we make is taken from one agreed sum."
+with a 10,000 ceiling → **AGGREGATE · POOL**, PROPOSED; the claimant saw no claim form until accepting; the claimant
+accepted the text by its hash; two claims of 6,000 were recorded and drew nothing while pending; the author confirmed
+claim 1 (payable 6,000, 4,000 left) and rejected claim 2 with a note (payable 0). Every result was reported only after
+the app re-read the state: **PASS**.
 
 ## Consensus behaviour
 

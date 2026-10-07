@@ -8,6 +8,8 @@
   validator and fail-safe — is the CapScope Intelligent Contract's, verbatim. Deployed at `0x59846a597599BEdcDC43264b20D6BED8658709B0`.
 - App rebuilt around the two-party flow: accept / decline with the text hash, claim form with the payable preview,
   confirm / reject on each pending claim.
+- Run through the app on StudioNet (6 transactions, `RUNTIME_EVIDENCE.md`): propose → accept by text hash → two claims →
+  one confirmed (6,000 payable), one rejected (nothing drawn).
 - Tests: 56 Direct Mode contract tests (the real SDK), 25/25 mutants, 46 frontend tests, calldata table
   and RPC probe, source hash; CI.
 
