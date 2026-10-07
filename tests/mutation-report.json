@@ -1,0 +1,131 @@
+{
+ "total": 25,
+ "caught": 25,
+ "results": [
+  {
+   "name": "AGGREGATE does not become POOL",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_tooth_pool_draws_down_and_fresh_renews"
+  },
+  {
+   "name": "POOL does not draw down",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_tooth_pool_draws_down_and_fresh_renews"
+  },
+  {
+   "name": "FRESH is not capped per claim",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_tooth_pool_draws_down_and_fresh_renews"
+  },
+  {
+   "name": "a cap is active at once (no acceptance)",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_tooth_pool_draws_down_and_fresh_renews"
+  },
+  {
+   "name": "acceptance ignores the text hash",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_revert_text_hash_mismatch - Ass..."
+  },
+  {
+   "name": "text hash not normalized",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_the_claimant_accepts_the_exact_text_by_its_hash"
+  },
+  {
+   "name": "anyone may accept",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_the_author_cannot_accept_for_the_claimant"
+  },
+  {
+   "name": "a declined cap may still be accepted",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_declined_cap_stays_closed - Ass..."
+  },
+  {
+   "name": "claims allowed before acceptance",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_nothing_can_be_claimed_before_the_claimant_accepts"
+  },
+  {
+   "name": "a recorded claim draws down at once",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_tooth_pool_draws_down_and_fresh_renews"
+  },
+  {
+   "name": "anyone may confirm",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_a_stranger_is_refused_by_every_restricted_write"
+  },
+  {
+   "name": "anyone may reject",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_a_stranger_is_refused_by_every_restricted_write"
+  },
+  {
+   "name": "a claim may be decided twice",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_a_claim_is_decided_once - Asser..."
+  },
+  {
+   "name": "confirm does not draw down",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_tooth_pool_draws_down_and_fresh_renews"
+  },
+  {
+   "name": "reject draws down",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_rejected_claim_draws_nothing_and_keeps_its_note"
+  },
+  {
+   "name": "confirm records the asked amount",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_tooth_pool_draws_down_and_fresh_renews"
+  },
+  {
+   "name": "pending count not decreased on confirm",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_rejected_claim_draws_nothing_and_keeps_its_note"
+  },
+  {
+   "name": "used-up pool still takes claims",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_used_up_pool_refuses_new_claims_but_fresh_does_not"
+  },
+  {
+   "name": "claim cap off by one (21 claims)",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_the_claim_cap_counts_every_claim"
+  },
+  {
+   "name": "claimant may be the author",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_revert_claimant_is_author - Ass..."
+  },
+  {
+   "name": "fail-safe flipped on unparseable output",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_fail_safe_on_unparseable_output"
+  },
+  {
+   "name": "validator accepts any valid label",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_validator_rejects_disagreement_and_bad_shapes"
+  },
+  {
+   "name": "reserved token not checked",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_reserved_tokens_are_refused_in_text_and_label"
+  },
+  {
+   "name": "same cap may be opened twice",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_cap_id_recipe_and_whitespace_variants"
+  },
+  {
+   "name": "note length cap off by one",
+   "status": "CAUGHT",
+   "first_failure": "FAILED tests/contract/test_capaccord.py::test_revert_note_too_long - Assertio..."
+  }
+ ]
+}

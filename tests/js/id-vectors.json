@@ -1,0 +1,35 @@
+{
+  "author": "0x6276095FAEA15108740445ff277fdA8c304657F4",
+  "caps": [
+    {
+      "text": "Every payment we make is taken from one agreed sum.",
+      "cap_id": "94bc2822636420fda3774785ed718180ac215a1c860e7f28eed3beece2d80931",
+      "text_hash": "fa7eecd3c3228d166776afdb2ae5c99a8581ac55c86b86fd2b5b27afa7159aa2"
+    },
+    {
+      "text": "  Every claim is measured   on its own\tagainst the agreed sum. ",
+      "cap_id": "758fc8da204f3d020a605c3568015c5728f7422af3d1e255d2ee5273224cc908",
+      "text_hash": "4d362ad4a4689cd35cc9f780500d6f6d8da0d257f47215db3917d193ac6ce273"
+    },
+    {
+      "text": "Café　limit per event",
+      "cap_id": "17d2b23ef212614b29b30f8de4049b94a96f9bafc622e97050e366ae372a8c1d",
+      "text_hash": "3b8a312f7f6abf3eac8067aa39bd4d79edf0add523718df436fd52a101687c98"
+    },
+    {
+      "text": "\u001cOne pool\u001f",
+      "cap_id": "6326bb605c5b957c5e7fb899bda25dec06d8ce4d90a9009557168e0987f7e501",
+      "text_hash": "b7fdd431a6001346f971cbf49546b58c2b6d7087e05c78d715489fbf7c5613ec"
+    },
+    {
+      "text": "﻿Total cap 🧾",
+      "cap_id": "2af0c4d43611be499737b453461973f615a4b4a9c814562d9897bc8137b769ba",
+      "text_hash": "986cb70643f53849828e91e92ed1887e891e04add3b0b0099ba847bbd39262dc"
+    },
+    {
+      "text": "Line oneline two",
+      "cap_id": "8e70d948aba00d7ee96008936d1c9e7dd36d3ecdab72e1bee554644278d2c0d4",
+      "text_hash": "e55076cdcdc2f8f959b91987954df4dd88166f2fce2be333e1b44ddaa461890f"
+    }
+  ]
+}
